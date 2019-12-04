@@ -5,6 +5,7 @@ RM = 3
 TICKS_PER_ROT = 1000
 WHEEL_CIRC_MM =  100
 TICKS_PER_MM = TICKS_PER_ROT/WHEEL_CIRC_MM
+wheel_base = 200
 
 def forward_mm(speed, dist):
     cmpc(LM)
@@ -38,3 +39,8 @@ def right_mm(speed, dist):
     mrp(LM, speed, total_ticks)
     mrp(RM, -speed, total_ticks)
     bmd(RM)
+    
+def left_deg(speed, deg):
+    cmpc(LM)
+    cmpc(RM)
+    degrees = 
