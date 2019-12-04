@@ -14,5 +14,27 @@ def forward_mm(speed, dist):
     mrp(RM, speed, total_ticks)
     bmd(RM)
 
+
+def back_mm(speed, dist):
+    cmpc(LM)
+    cmpc(RM)
+    total_ticks= dist*TICKS_PER_MM
+    mrp(LM, -speed, total_ticks)
+    mrp(RM, -speed, total_ticks)
+    bmd(RM)
     
-    
+def left_mm(speed, dist):
+    cmpc(LM)
+    cmpc(RM)
+    total_ticks= dist*TICKS_PER_MM
+    mrp(LM, -speed, total_ticks)
+    mrp(RM, speed, total_ticks)
+    bmd(RM)
+
+def right_mm(speed, dist):
+    cmpc(LM)
+    cmpc(RM)
+    total_ticks= dist*TICKS_PER_MM
+    mrp(LM, speed, total_ticks)
+    mrp(RM, -speed, total_ticks)
+    bmd(RM)
