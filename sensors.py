@@ -9,15 +9,15 @@ Thresh = 2500
 
 def drive_to_black(speed):
 	mav(RM, speed)
-  mav(LM, speed)
-  while analog(Line_port) < Thresh:
+	mav(LM, speed)
+	while analog(Line_port) < Thresh:
 		pass
 	ao()
             
 def drive_to_white(speed):
 	mav(RM, speed)
-  mav(LM, speed)
-  while analog(Line_port) > Thresh:
+	mav(LM, speed)
+	while analog(Line_port) > Thresh:
 		pass
 	ao()    
    
@@ -36,11 +36,11 @@ def left_to_black(speed):
 	ao()  
    
 def right_to_white(speed):
-  mav(Lmotor, speed)
+	mav(Lmotor, speed)
 	mav(Rmotor, -speed)
 	while analog(Line_port) > Thresh:
 		pass
-  ao()  
+	ao()  
   
 def left_to_white(speed):
 	mav(Lmotor, -speed)
