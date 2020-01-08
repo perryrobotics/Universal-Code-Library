@@ -50,4 +50,8 @@ def left_to_white(speed):
 	ao()  
 
 def line_average():
-	
+	line = []
+	for x in range(16):
+		line.append(analog(line_port))
+	for x in range(16):
+		
