@@ -48,3 +48,6 @@ def left_to_white(speed):
 	while analog(Line_port) > Thresh:
 		pass
 	ao()  
+
+def line_average():
+	
