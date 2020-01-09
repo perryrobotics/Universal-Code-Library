@@ -69,3 +69,14 @@ def line_median(port, times):
 	median = times/2
 	return med[median]
 
+def line_average_median(port,times):
+	median = []
+	for x in times:
+		line = []
+		for x in range(times):
+			line.append(analog(port))
+		for x in range(times):
+			line[0] = line[0]+line.pop(1)
+		line_average = line[0]/times
+		median.append(line_average)
+		
