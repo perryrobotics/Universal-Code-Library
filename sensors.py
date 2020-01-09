@@ -50,11 +50,22 @@ def left_to_white(speed):
 	ao()  
 
 #line average
-def line_average(times):
+def line_average(port,times):
 	line = []
 	for x in range(times):
-		line.append(analog(line_port))
+		line.append(analog(port))
 	for x in range(times):
 		line[0] = line[0]+line.pop(1)
 	line_average = line[0]/times
 	return line_average
+
+def line_median(port, times):
+	med = []
+	if times%2 == 1
+		times = times+1
+	for x in range(times)
+		med.append(analog(port))
+	med.sort()
+	median = times/2
+	return med[median]
+
