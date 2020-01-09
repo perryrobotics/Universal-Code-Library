@@ -50,11 +50,11 @@ def left_to_white(speed):
 	ao()  
 
 #line average
-def line_average():
+def line_average(times):
 	line = []
-	for x in range(15):
+	for x in range(times):
 		line.append(analog(line_port))
-	for x in range(15):
+	for x in range(times):
 		line[0] = line[0]+line.pop(1)
-	line_average = line[0]/15
-	return line[0]
+	line_average = line[0]/times
+	return line_average
