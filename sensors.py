@@ -61,8 +61,8 @@ def line_average(port,times):
 
 def line_median(port, times):
 	med = []
-	if times%2 == 1
-		times = times+1
+	if times%2 == 1:
+ 		times = times+1
 	for x in range(times)
 		med.append(analog(port))
 	med.sort()
@@ -79,4 +79,8 @@ def line_average_median(port,times):
 			line[0] = line[0]+line.pop(1)
 		line_average = line[0]/times
 		median.append(line_average)
-		
+	median.sort()
+	if times%2 == 1:
+		times = times +1
+	med = times/2
+	return median[med]
