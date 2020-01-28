@@ -27,30 +27,18 @@ def arm_back(step):
     
 def arm_up(step):
 	move_servo_slow(Arm, get_servo_position(Arm), Arm_up, step)
+	msleep(750)
 
 def arm_down(step):
 	move_servo_slow(Arm, get_servo_position(Arm), Arm_down, step)
-
+	msleep(750)
 
 #############################
-
-
         
 def open_claw(step):
 	move_servo_slow(Claw, get_servo_position(Claw), Claw_open, step)
+	msleep(750)
    
 def close_claw(step):
   	move_servo_slow(Claw, get_servo_position(Claw), Claw_close, step)
-
-        
-############################
-        
-def move_box(position):
-	set_servo_position(Box, position)
 	msleep(750)
-        
-def carry_box(step):
-	move_servo_slow(Box,get_servo_position(Box), Box_back, step)
-        
-def down_box(step):
-	move_servo_slow(Box,get_servo_position(Box), Box_down, step)
