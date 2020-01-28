@@ -54,7 +54,7 @@ def line_average(port,times):
 	line = []
 	for x in range(times):
 		line.append(analog(port))
-	for x in range(times):
+	for x in range(times-1):
 		line[0] = line[0]+line.pop(1)
 	line_average = line[0]/times
 	return line_average
@@ -75,7 +75,7 @@ def line_average_median(port,times):
 		line = []
 		for x in range(times):
 			line.append(analog(port))
-		for x in range(times):
+		for x in range(times-1):
 			line[0] = line[0]+line.pop(1)
 		line_average = line[0]/times
 		median.append(line_average)
